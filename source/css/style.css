@@ -161,11 +161,20 @@ html, body{
 .main-block {
     position: relative;
 }
+
 @media(max-width: 1370px){
     .main-block {
         background-color: black;
     }
 }
+/*.gradient{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0));
+
+}*/
 .main-block__container {
 }
 .main-block__body {
@@ -305,74 +314,40 @@ html, body{
     justify-content: center;
     padding-right: 30px;
 }
-.main-block__button__body {
+.main-block__button {
     width: 179px;
     height: 47px;
-    display: inline-flex;
-    justify-content: center;
-    background: #DA3131;
-    border-radius: 20px;
-    transform: scale(1);
-}
-.main-block__button-link{
     font-family: 'Quicksand', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: calc(25 / 20 * 100%);
-    display: inline-flex;
-    align-items: center;
+    text-align: center;
     color: #fff;
+    background: #DA3131;
+    border-radius: 20px;
+    transform: scale(1);
 }
-.main-block__button-link::after{
-    content: "";
-    display: inline-flex;
-    width: 36%;
-    height: 3px;
-    opacity: 0;
-    background-color: #fff;
-    position: absolute;
-    top: 81.5%;
-    left: 32.5%;
-    z-index: 4;
-    transition: opacity 0.1s linear;
+.main-block__button:hover{
+    transform: scale(1.01);
+
 }
-.main-block__button-link:hover::after{
-    opacity: 1;
-}
-.main-block__button__body::after{
-    content: "";
-    display: inline-flex;
-    justify-content: center;
-    width: 36%;
-    height: 3px;
-    opacity: 0;
-    background-color: #fff;
-    position: absolute;
-    top: 81.5%;
-    left: 32.5%;
-    z-index: 4;
-    transition: opacity 0.1s linear;
-}
-.main-block__button__body:hover::after{
-    opacity: 1;
+.main-block__button:active{
+    transform: scale(1.03);
+    transition: 0.2s;
 }
 @media(min-width: 3201px){
-    .main-block__button__body{
+    .main-block__button{
+        font-size: 31px;
         width: 264px;
         height: 69px;
     }
-    .main-block__button-link{
-        font-size: 32px;
-    }
 }
 @media(min-width: 2000px) and (max-width: 3200px){
-    .main-block__button__body{
+    .main-block__button{
+        font-size: 26px;
         width: 211px;
         height: 55px;
-    }
-    .main-block__button-link{
-        font-size: 25px;
     }
 }
 .main-block__right {
@@ -409,7 +384,7 @@ html, body{
 }
 @media(max-width: 1370px){
     .main-block__images {
-        opacity: 0.65;
+        opacity: 0.7;
     }
 }
 @media(max-width: 992px){
@@ -441,17 +416,17 @@ html, body{
     transform: scale(1);
 }
 .right-btns__discord:hover{
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 .right-btns__facebook:hover{
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 .right-btns__discord:active{
-    transform: scale(1.07);
+    transform: scale(1.05);
     transition: 0.2s;
 }
 .right-btns__facebook:active{
-    transform: scale(1.07);
+    transform: scale(1.05);
     transition: 0.2s;
 }
 @media(min-width: 3201px){
@@ -470,20 +445,6 @@ html, body{
         background-size: cover;
         margin-top: 7px;
     }
-    .right-btns__discord:hover{
-        transform: scale(1.08);
-    }
-    .right-btns__facebook:hover{
-        transform: scale(1.08);
-    }
-    .right-btns__discord:active{
-        transform: scale(1.12);
-        transition: 0.1s;
-    }
-    .right-btns__facebook:active{
-        transform: scale(1.12);
-        transition: 0.1s;
-    }
 }
 @media(min-width: 2000px) and (max-width: 3200px){
     .right-btns {
@@ -499,20 +460,6 @@ html, body{
         height: 145px;
         background-size: cover;
         margin-top: 5px;
-    }
-    .right-btns__discord:hover{
-        transform: scale(1.05);
-    }
-    .right-btns__facebook:hover{
-        transform: scale(1.05);
-    }
-    .right-btns__discord:active{
-        transform: scale(1.09);
-        transition: 0.2s;
-    }
-    .right-btns__facebook:active{
-        transform: scale(1.09);
-        transition: 0.2s;
     }
 }
 /*--------SECOND-BLOCK------------------------------------------------------*/
@@ -791,83 +738,50 @@ html, body{
         margin-top: 48px;
     }
 }
-.button__body {
-    width: 242px;
-    height: 65px;
-    background: #DA3131;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    display: inline-flex;
-    justify-content: center;
-    transform: scale(1);
-}
-.button__registrate-link{
+.button__registrate {
     font-family: 'Quicksand', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: calc(31 / 25 * 100%);
     color: #fff;
-    display: inline-flex;
-    align-items: center;
+    text-align: center;
+
+    width: 242px;
+    height: 65px;
+    background: #DA3131;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    transform: scale(1);
 }
-.button__registrate-link::after{
-    content: "";
-    display: inline-flex;
-    width: 46%;
-    height: 3px;
-    opacity: 0;
-    background-color: #fff;
-    position: absolute;
-    top: 73%;
-    left: 27%;
-    z-index: 4;
-    transition: opacity 0.1s linear;
+.button__registrate:hover{
+    transform: scale(1.01);
+
 }
-.button__registrate-link:hover::after{
-    opacity: 1;
-}
-.button__body::after{
-    content: "";
-    display: inline-flex;
-    justify-content: center;
-    width: 46%;
-    height: 3px;
-    opacity: 0;
-    background-color: #fff;
-    position: absolute;
-    top: 73%;
-    left: 27%;
-    z-index: 4;
-    transition: opacity 0.1s linear;
-}
-.button__body:hover::after{
-    opacity: 1;
+.button__registrate:active{
+    transform: scale(1.03);
+    transition: 0.2s;
 }
 @media(min-width: 3001px){
-    .button__body {    
+    .button__registrate {
+        font-size: 30px;
+    
         width: 290px;
         height: 78px;
     }
-    .button__registrate-link{
-        font-size: 30px;
-    }
 }
 @media(min-width: 2000px) and (max-width: 3000px){
-    .button__body {
+    .button__registrate {
+        font-size: 27px;
+    
         width: 261px;
         height: 70px;
     }
-    .button__registrate-link{
-        font-size: 27px;
-    }
 }
 @media(max-width: 377px){
-    .button__body{
+    .button__registrate{
         width: 223px;
         height: 60px;
-    }
-    .button__registrate-link{
         font-size: 23px;
     }
 }
@@ -1042,64 +956,29 @@ html, body{
 .button-learn-more {
     width: 203px;
     height: 54px;
-    display: inline-flex;
-    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: calc(31 / 25 * 100%);
+    color: #fff;
 
     background: #DA3131;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     transform: scale(1);
 }
-.learn-more__link{
-    font-family: 'Quicksand', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    font-size: 25px;
-    line-height: calc(31 / 25 * 100%);
-    color: #fff;
-    
+.button-learn-more:hover{
+    transform: scale(1.01);
 }
-.learn-more__link::after{
-    content: "";
-    display: inline-flex;
-    width: 71%;
-    height: 3px;
-    opacity: 0;
-    background-color: #fff;
-    position: absolute;
-    top: 81%;
-    left: 14.5%;
-    z-index: 4;
-    transition: opacity 0.1s linear;
-}
-.learn-more__link:hover::after{
-    opacity: 1;
-}
-.button-learn-more::after{
-    content: "";
-    display: inline-flex;
-    justify-content: center;
-    width: 71%;
-    height: 3px;
-    opacity: 0;
-    background-color: #fff;
-    position: absolute;
-    top: 81%;
-    left: 14.5%;
-    z-index: 4;
-    transition: opacity 0.1s linear;
-}
-.button-learn-more:hover::after{
-    opacity: 1;
+.button-learn-more:active{
+    transform: scale(1.03);
+    transition: 0.2s;
 }
 @media(min-width: 3001px){
     .button-learn-more{
         width: 225px;
         height: 60px;
-    }
-    .learn-more__link{
         font-size: 28px;
     }
 }
@@ -1323,11 +1202,6 @@ html, body{
         padding-left: 20%;
     }
 }
-@media(max-width: 385px){
-    .menu__nav {
-        padding-left: 10%;
-    }
-}
 .nav__link {
     font-size: 13px;
     line-height: calc(18 / 13 * 100%);
@@ -1413,11 +1287,6 @@ html, body{
     .media__items {
         display: block;
         padding-left: 20%;
-    }
-}
-@media(max-width: 385px){
-    .media__items {
-        padding-left: 10%;
     }
 }
 .media__link {
